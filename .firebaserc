@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-a788d": {
+      "hosting": {
+        "git-login-firebase": [
+          "angular-a788d"
+        ]
+      }
+    }
+  }
+}

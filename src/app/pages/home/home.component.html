@@ -1,0 +1,29 @@
+<form
+class="form-inline mt-4 d-flex justify-content-center"
+(ngSubmit)="handlefind()"
+>
+<div class="form-group">
+  <label for="userName">User Name</label>
+  <input
+    [(ngModel)]="userName"
+    type="text"
+    
+    class="form-control mx-sm-3"
+    name="userName"
+  />
+</div>
+<button type="submit" class="btn btn-primary mb-2">Find User</button>
+</form>
+<div *ngIf="error">
+    Error : {{error}}
+</div>
+<div class="row">
+    <div class="col">
+        <app-user-card *ngIf="user" [user]="user"></app-user-card>
+    </div>
+    <div class="col">
+     
+        <app-repos *ngIf="user" [repoUrl]="user.repos_url"></app-repos>
+    </div>
+ 
+</div>
